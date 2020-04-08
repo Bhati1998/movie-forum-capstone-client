@@ -1,0 +1,31 @@
+.homepage {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 400px;
+    background-color: #aaa;
+    margin-bottom: 20px;
+}
+
+.create-post {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 400px;
+    background-color: #aaa;
+    margin-bottom: 20px;
+}
+
+.search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 400px;
+    background-color: #aaa;
+}

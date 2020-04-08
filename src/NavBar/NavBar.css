@@ -1,0 +1,22 @@
+.main-nav {
+    /* display: flex; */
+    /* flex-direction: row; */
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.user-history {
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+.user-history div {
+    padding: 5px;
+}
+
+.login {
+    float: right;
+    margin-right: 15px;
+}
