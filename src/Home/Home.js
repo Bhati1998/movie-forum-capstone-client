@@ -1,64 +1,83 @@
 import React, { Component } from 'react';
-// import { API_ENDPOINT } from '../config'
-import './Homepage.css'
 
 const API_ENDPOINT = 'http://localhost:8000'
 
-export default class Homepage extends Component {
+
+class Home extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             params: {
-                searchTerm: ""
+                searchTerm: ''
             },
             user: []
         }
     }
 
-
+    // convert query parameter from an object to a string
     formatQueryParams(params) {
         const queryItems = Object.keys(params)
-            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+            .map(key => `${encodeURIComponent(params[key])}`)
+            // .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
         return queryItems.join('&')
     }
 
-    // getMovieData(searchTerm) {
-    // 	const url = `${API_ENDPOINT}/movie/search/${searchTerm}`
-    // 	fetch(url)
-    // 		.then(response => {
-    // 			if (!response.ok) {
-    // 				throw new Error(response.statusText);
-    // 			}
-    // 			return response.json();
-    // 		})
-    // 		.then(data => {
-    // 		console.log(data)
-    // 			this.setState({
-    // 				wineData: data,
-    // 				 hidediv: true
-    // 		})
-    // 	})
-    // 		.catch(err => {
-    // 			console.log(err);
-    // 		});
-    // }
+    // if an integer is empty, undefinded or null, default it to 0
+    checkInteger(inputInteger) {
+        let outputValue = inputInteger
+        if (inputInteger === "") {
+            outputValue = 0
+        }
+        if (inputInteger === undefined) {
+            outputValue = 0
+        }
+        if (inputInteger == null) {
+            outputValue = 0
+        }
+        return outputValue
+    }
 
-    handleSearch = e => {
+    // if a string is undefinded or null, default it to "no details"
+    checkString(inputString) {
+        let outputText = inputString
+        if (inputString === undefined) {
+            outputText = "no details"
+        }
+        if (inputString == null) {
+            outputText = "no details"
+        }
+        return outputText
+    }
+
+    // if a URL is undefinded or null, default it to the root url "/"
+    checkURL(inputURL) {
+        let outputURL = inputURL
+        if (inputURL === undefined) {
+            outputURL = "/"
+        }
+        if (inputURL == null) {
+            outputURL = "/"
+        }
+        return outputURL
+    }
+
+    //get the imput from the user
+    handleSearch = (e) => {
         e.preventDefault()
-        const { searchTerm } = e.target
-        console.log(searchTerm);
-        console.log(e.target, 'this is the e.target')
+        // console.log(e.target, ' this is the e.target ')
 
         //create an object to store the search filters
         const data = {}
 
         //get all the from data from the form component
         const formData = new FormData(e.target)
-        console.log(formData)
+
         //for each of the keys in form data populate it with form value
         for (let value of formData) {
             data[value[0]] = value[1]
         }
+
+        console.log(data)
 
         //assigning the object from the form data to params in the state
         this.setState({
@@ -66,18 +85,19 @@ export default class Homepage extends Component {
         })
 
         //check if the state is populated with the search params data
-        console.log(this.state.params)
+        // console.log(this.state.params, 'this is the state.params')
 
         //get the google books api url
-        const searchURL = `${API_ENDPOINT}/movie/search/batman`
+        const searchURL = `${API_ENDPOINT}/movie/search/`
 
         //format the queryString paramters into an object
         const queryString = this.formatQueryParams(data)
 
         //sent all the params to the final url
-        const url = searchURL + '?' + queryString
+        // const url = searchURL + '?' + queryString
+        const url = searchURL + encodeURI(queryString)
 
-        console.log(url)
+        console.log(url, 'this is the url console log')
 
         //define the API call parameters
         const options = {
@@ -166,33 +186,43 @@ export default class Homepage extends Component {
                     error: err.message
                 })
             })
+
     }
 
-
-
-
     render() {
-        return (
-            <div className='homepage'>
-                {/* <div 
-                    className='featured'
-                >
-                        Featured Items
-                </div> */}
-                <form
-                    onSubmit={this.handleSearch}
-                >
-                    Enter keywords to search posts by movie
-                    <input name='searchTerm' id='searchTerm' type='text' />
-                    <button type='submit'>Submit</button>
-                </form>
-                <div
-                    className='create-post'
-                >
-                    Create Post
-                </div>
+        const errorMessage = this.state.error ? <div>{this.state.error}</div> : false
 
+        return (
+            <div>
+                <form onSubmit={this.handleSearch}>
+                    <label>Search:</label>
+                    <input type='text'
+                    name='searchTerm' 
+                    className='search-bar' 
+                    placeholder='Batman' 
+                    required />
+                    <button type="submit">search</button>
+                    {/* <div className='filter-bar'>
+                        <label>Print Type</label>
+                        <select name="printType">
+                            <option value='all'>All</option>
+                            <option value='books'>Books</option>
+                            <option value='magazines'>magazines</option>
+                        </select>
+                        <label>Book Type</label>
+                        <select name='filter'>
+                            <option value='ebooks'>ebooks</option>
+                            <option value='free-ebooks'>Free-ebooks</option>
+                            <option value='full'>Full</option>
+                            <option value='paid-ebooks'>Paid</option>
+                            <option value='partial'>previews</option>
+                        </select>
+                    </div> */}
+
+                </form>
             </div>
         )
     }
 }
+
+export default Home

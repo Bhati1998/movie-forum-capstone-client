@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 
 export default class CreatePost extends Component {
     render() {
-        return(
+        return (
             <div>
-                Create Create
-                <div>
-                    Post Title
-                    <input></input>
-                </div>
+                <form>
+                    Create Post
+                    <div>
+                        Post Title
+                        <input></input>
+
                     Post content
-                    <input></input>
+                        <input></input>
+                    </div>
+                </form>
             </div>
         )
     }

@@ -23,6 +23,26 @@ Landing/Login Page |
 :-------------------------:|
 ![Landing/Login Page](/github-images/wireframes/Landing-Page.png)  |
 
+Registration 
+!https://repl.it/@ChristianGeorge/Capstone-Login-Wireframe
+User enters username and confirms password -> if criteria is not met an alert is generated -> once criteria is met user is directed to homepage
+
+Login
+https://repl.it/@ChristianGeorge/Capstone-Login
+User logs in with username and password -> user is notified if criteria is incorrect -> user can click a link to generate an email to reset password -> once user is logged in, user is directed to homepage
+
+HomePage
+https://repl.it/@ChristianGeorge/Capstone-Homepage
+User is able to see nav bar at top, trending movies/tv, and the search section below -> user can click on the trending movies to be directed to posts on that topic -> user can use search feature to search for specific media
+
+Create Post
+https://repl.it/@ChristianGeorge/CumbersomeNutritiousLinkedlist
+User is able to create a post wiht a chosen title and content -> user can submit that post to be viewed on the homepage and in relation to other topics
+
+Comment on Post
+https://repl.it/@ChristianGeorge/Capstone-Comment-on-post
+Users are able to comment on the post of other users, or on their own posts
+
 ## Screenshots
 Landing/Login Page |
 :-------------------------:|
@@ -38,8 +58,29 @@ Search feature looks for user's number (XXXXX) and possible Rebrickable number (
 
 ## Business Objects (database structure)
 * User (collection)
-    * Username
+    * ID
+    * Email
     * Password
+    * First name
+    * Last name
+* Movie
+    * ID
+    * User ID
+    * Movie title
+    * Release date
+    * Average rating
+    * Genre
+    * Image
+* Posts
+    * ID
+    * Movie ID
+    * Post title
+    * Post content
+* Comments
+    * ID
+    * Post ID
+    * Comment content
+
 
 ## Technology
 * Front-End: HTML5, CSS3, JavaScript ES6, jQuery
@@ -53,3 +94,17 @@ App is built to be usable on mobile devices, as well as responsive across mobile
 This is v1.0 of the app, but future enhancements are expected to include:
 * Wishlist (from the inventory page part details);
         (1) see how many parts there are in the Wishlist
+
+## How to run it
+Use command line to navigate into the project folder and run the following in terminal
+
+### Local Node scripts
+* To install the node project ===> npm install
+* To migrate the database ===> npm run migrate -- 1
+* To run Node server (on port 8000) ===> npm run dev
+* To run tests ===> npm run test
+
+### Local React scripts
+* To install the react project ===> npm install
+* To run react (on port 3000) ===> npm start
+* To run tests ===> npm run test

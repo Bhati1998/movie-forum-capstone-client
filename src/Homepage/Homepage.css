@@ -4,15 +4,6 @@
     margin-right: auto;
 }
 
-.featured {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 400px;
-    background-color: #aaa;
-    margin-bottom: 20px;
-}
-
 .create-post {
     margin-left: auto;
     margin-right: auto;
@@ -25,6 +16,7 @@
 .search {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     width: 90%;
     height: 400px;
     background-color: #aaa;

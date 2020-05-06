@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Link from 'react-router-dom';
-// import Redirect from 'react-router-dom';
-// import config from './config';
+import Link from 'react-router-dom';
+import Redirect from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
 import Login from './Login/Login'
 import Register from './Register/Register';
 import Homepage from './Homepage/Homepage';
 import CreatePost from './CreatePost/CreatePost';
+import { API_ENDPOINT } from './config'
+import Home from './Home/Home'
 import './App.css';
 
 
 
 class App extends Component {
-  // state = {
-  //   notes: [],
-  //   folders: [],
-  // };
 
-  // componentDidMount() {
-  //   Promise.all([
-  //     fetch(`${config.API_ENDPOINT}`),
-  //   ])
-  //     .then(([notesRes, foldersRes]) => {
-  //       if (!notesRes.ok)
-  //         return notesRes.json().then(e => Promise.reject(e));
-  //       if (!foldersRes.ok)
-  //         return foldersRes.json().then(e => Promise.reject(e));
 
-  //       return Promise.all([notesRes.json(), foldersRes.json()]);
-  //     })
-  //     .then(([notes, folders]) => {
-  //       this.setState({ notes, folders });
-  //     })
-  //     .catch(error => {
-  //       console.error({ error })
-  //     });
+	// getMovieData(searchTerm) {
+	// 	const url = `${API_ENDPOINT}/movie/search/${searchTerm}`
+	// 	fetch(url)
+	// 		.then(response => {
+	// 			if (!response.ok) {
+	// 				throw new Error(response.statusText);
+	// 			}
+	// 			return response.json();
+	// 		})
+	// 		.then(data => {
+	// 		console.log(data)
+	// 			this.setState({
+	// 				wineData: data,
+	// 				 hidediv: true
+	// 		})
+	// 	})
+	// 		.catch(err => {
+	// 			console.log(err);
+	// 		});
+	// }
   // }
 
   render() {
@@ -52,6 +52,7 @@ class App extends Component {
     return (
         <div className="App">
           <NavBar />
+          {/* <Homepage /> */}
           <header>
             <h1>MovieChat</h1>
             {/* <Link to='/'><h1>MovieChat</h1></Link> */}
@@ -59,7 +60,7 @@ class App extends Component {
           <Router>
           <main className="homepage">
             <Switch>
-            <Route exact path="/" component={Homepage} />
+            <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/post" component={CreatePost} />
