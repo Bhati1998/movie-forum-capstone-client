@@ -5,6 +5,7 @@ const API_ENDPOINT = 'http://localhost:8000'
 const AuthApiService = {
     postLogin(credentials) {
         console.log(credentials, 'these are the credentials')
+
         return fetch(`${API_ENDPOINT}/auth/login`, {
             method: 'POST',
             headers: {
@@ -14,15 +15,23 @@ const AuthApiService = {
             
         })
         .then(res => {
-            console.log(res, 'this is the res for auth')
-            (!res.ok)
-                ? res.json().then(e => Promise.reject(e))
-                : res.json()
+            console.log(res.status)
+            if (res.status != 200) {
+                alert('Invalid login details')
+            }
+            else {
+                res.json()
+                window.location = '/'
+            }
+            // (!res.ok)
+            //     ? res.json().then(e => Promise.reject(e))
+            //     : res.json()
+                // window.location = '/'
         })
         .catch(err => console.log(err))
     },
     postUser(user) {
-        console.log(`${API_ENDPOINT}/user`)
+        // console.log(`${API_ENDPOINT}/user`)
         return fetch(`${API_ENDPOINT}/user`, {
             method: 'POST',
             headers: {
@@ -31,9 +40,19 @@ const AuthApiService = {
             body: JSON.stringify(user),
         })
             .then(res => {
-                (!res.ok)
-                    ? res.json().then(e => Promise.reject(e))
-                    : res.json() 
+                console.log(res.status)
+                if (res.status != 201) {
+                    alert('could not create user')
+                }
+                else {
+                    window.location = '/login'
+                }
+                // console.log(res, 'this is the res for post user')
+                // return res.json()
+                // window.location.href='/login'
+                // (!res.ok)
+                //     ? res.json().then(e => Promise.reject(e))
+                //     : res.json() 
                 })
             .catch(err => console.log(err))
 

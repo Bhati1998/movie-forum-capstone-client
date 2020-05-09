@@ -1,0 +1,18 @@
+.movie-card {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid darkslategray;
+    border-radius: 5px;
+    box-shadow: 5px 10px;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+}
+
+.genre, .rating, .overview {
+    font-family: 'Open Sans', sans-serif;
+}
+

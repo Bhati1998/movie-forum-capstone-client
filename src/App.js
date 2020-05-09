@@ -9,6 +9,7 @@ import Homepage from './Homepage/Homepage';
 import CreatePost from './CreatePost/CreatePost';
 import { API_ENDPOINT } from './config'
 import Home from './Home/Home'
+import MoviePage from './MoviePage/MoviePage'
 import './App.css';
 
 
@@ -64,6 +65,7 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/post" component={CreatePost} />
+            <Route path='/movie' component={MoviePage} />
 
 
 

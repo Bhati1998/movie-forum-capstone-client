@@ -52,7 +52,6 @@ export default class Login extends Component {
                 password.value = ''
                 TokenService.saveAuthToken(res.authToken)
                 TokenService.saveUserId(res.userId)
-                fetch(`${API_ENDPOINT}/met/interval`)
                 window.location = '/dashboard'
             })
             .then()
