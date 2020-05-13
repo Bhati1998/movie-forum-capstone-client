@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import Posts from '../Posts/Posts'
 import CreatePost from '../CreatePost/CreatePost'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 export default class MoviePage extends Component {
 
-    // handleClick = (e) => {
-    //     console.log(this.props.location.state.movie.average_rating)
-    // }
-
-    // renderMoviePage = (e) => {
-    //     const { average_rating, genre, img, movie_db_id, movie_title, overview, release_year } = this.props.location.state.movie
-    //     console.log('function is running')
-    //     return (
-    //         <div>
-    //             <img src={img} />
-    //             <h1>{movie_title}({release_year})</h1>
-    //             <p>{genre}</p>
-    //             <p>{average_rating}</p>
-    //             <p>{movie_db_id}</p>
-    //             <p>{overview}</p>
-    //         </div>
-    //     )
-    // }
+    
 
     render() {
+        console.log(this.props)
         const { average_rating, genre, img, movie_db_id, movie_title, overview, release_year } = this.props.location.state.movie
         return (
             <>
@@ -31,12 +17,12 @@ export default class MoviePage extends Component {
                 <img src={img} />
                 <h1>{movie_title}({release_year})</h1>
                 <p>{genre}</p>
-                <p>{average_rating}</p>
-                <p>{movie_db_id}</p>
+                <p><FontAwesomeIcon icon={faStar} style={{ color: 'gold' }}/> {average_rating}</p>
+                {/* <p>{movie_db_id}</p> */}
                 <p>{overview}</p>
             </div>
-            <CreatePost props={movie_db_id}/>
-            <Posts props={movie_db_id}/>
+            <CreatePost movie_db_id={movie_db_id}/>
+            <Posts movie_db_id={movie_db_id}/>
             </>
         )
     }

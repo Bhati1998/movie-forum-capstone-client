@@ -21,7 +21,7 @@ export default class CreatePost extends Component {
         return (
             <div>
                 <button onClick={(e) => this.handleFormRender(e)}>Create Post</button>
-                {this.state.isButtonClicked ? <PostForm props={this.props.movie_db_id}/> : null }
+                {this.state.isButtonClicked ? <PostForm movie_db_id={this.props}/> : null }
             </div>
         )
     }

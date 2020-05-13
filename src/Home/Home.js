@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MovieList from '../MovieList/MovieList'
+import TokenService from '../Services/token-services'
 import './Home.css'
 
 const API_ENDPOINT = 'http://localhost:8000'
@@ -12,8 +13,9 @@ class Home extends React.Component {
             params: {
                 searchTerm: ''
             },
-            user: [],
+            username: [],
             movies: [],
+            user_id: '',
             isSearchTriggered: false
         }
     }
@@ -25,6 +27,13 @@ class Home extends React.Component {
         // .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
         return queryItems.join('&')
     }
+
+    componentDidMount(){
+        this.setState({
+            user_id: localStorage.user_id
+        });
+      }
+    
 
     // if an integer is empty, undefinded or null, default it to 0
     // checkInteger(inputInteger) {
@@ -134,49 +143,19 @@ class Home extends React.Component {
             // use the json api output
             .then(data => {
 
-                //check if there is meaningfull data
-                // console.log(data);
-
-                // check if there are no results
+                console.log(data, 'this is the data')
                 if (data.length == 0) {
                     console.log('error')
                     throw new Error('No movies found')
                 }
 
-                // average_rating: 7.7
-                // genre: "action"
-                // img: "/lh5lbisD4oDbEKgUxoRaZU8HVrk.jpg"
-                // movie_db_id: 272
-                // movie_title: "Batman Begins"
-                // overview: "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman."
-                // release_date: "2005-06-10"
-
-                // create and object with each one of the results
                 const movies = data.map(movie => {
 
                     // get the title, authors, description, imageLinks, previewLink from "volumeInfo"
-                    const { average_rating, genre, img, movie_db_id, movie_title, overview, release_date } = movie
+                    const { average_rating, genre, img, movie_db_id, movie_title, overview, release_date, id } = movie
 
                     const yearFromDate = release_date.substring(0,4)
 
-                    //if the image is not defined replace it with a no-image image
-                    // let imageLinksOutput = ''
-                    // if (imageLinks === undefined) {
-                    //     imageLinksOutput = 'https://legacytaylorsville.com/wp-content/uploads/2015/07/No-Image-Available1.png'
-                    // } else {
-                    //     imageLinksOutput = imageLinks.thumbnail
-                    // }
-
-                    //check if the data validation works
-                    // console.log(this.checkString(title));
-                    // console.log(this.checkString(authors));
-                    // console.log(this.checkString(description));
-                    // console.log(this.checkURL(previewLink));
-                    // console.log(this.checkURL(imageLinksOutput));
-                    // console.log(this.checkInteger(saleability));
-                    // console.log(this.checkInteger(retailPrice));
-
-                    // fix the inconsitent results and return them
                     return {
                         movie_title: (movie_title),
                         movie_db_id: (movie_db_id),
@@ -186,6 +165,7 @@ class Home extends React.Component {
                         average_rating: (average_rating),
                         genre: (genre),
                         img: (img),
+                        movie_id: (id)
                     }
                 })
 
@@ -213,6 +193,10 @@ class Home extends React.Component {
     render() {
         const errorMessage = this.state.error ? <div>{this.state.error}</div> : false
 
+        console.log('this is the state', this.state)
+
+        console.log(TokenService.getUserId(), 'this is the user id***********')
+
         return (
             <div>
                 <form onSubmit={this.handleSearch}>
@@ -237,6 +221,7 @@ class Home extends React.Component {
                                     overview={movie.overview}
                                     release_year={movie.release_year}
                                     release_date={movie.release_date}
+                                    movie_id={movie.movie_id}
                                 />
                             </li>)
                         )}

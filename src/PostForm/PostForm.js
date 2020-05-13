@@ -8,10 +8,14 @@ export default class PostForm extends Component {
         this.state = {
             post_title: '',
             post_content: '',
-            user_id: 2,
-            movie_db_id: this.props.movie_db_id
+            user_id: localStorage.getItem('user_id'),
+            movie_db_id: this.props.movie_db_id.movie_db_id
         }
     }
+
+    // checkState = (e) => {
+    //     console.log(this.state, 'this is state then props', this.props)
+    // }
 
     handleTitleChange = (e) => {
         this.setState({ post_title: e.target.value });
@@ -21,11 +25,9 @@ export default class PostForm extends Component {
         this.setState({ post_content: e.target.value });
     }
 
-    buttonTest = (e) => {
-        console.log('button working', this.state)
-    }
 
-    handleSubmitPost = () => {
+    handleSubmitPost = (event) => {
+        event.preventDefault()
         console.log('function triggering')
             fetch(`${API_ENDPOINT}/posts`, {
                 method: 'POST',
@@ -40,6 +42,7 @@ export default class PostForm extends Component {
                 if (res.status != 201) {
                     alert('Unable to post')
                 }
+                alert('post succesful')
                 // (!res.ok)
                 //     ? res.json().then(e => Promise.reject(e))
                 //     : res.json()
@@ -50,15 +53,14 @@ export default class PostForm extends Component {
 
 
     render() {
-
+        console.log(this.state, 'this is the state', this.props.props, 'this is the props')
         return (
-
             <form onSubmit={this.handleSubmitPost}>
                 Post Title
                 <input type="text" name="title" placeholder="title" onChange={this.handleTitleChange} />
                 Post Content
                 <input type="text" name="content" placeholder="content" onChange={this.handleContentChange} />
-                <button type="submit" onClick={this.buttonTest}>Create</button>
+                <button type="submit" onClick={this.checkState}>Create</button>
             </form>
         )
     }

@@ -20,12 +20,13 @@ const AuthApiService = {
                 alert('Invalid login details')
             }
             else {
-                res.json()
-                window.location = '/'
+                // res.json()
+                return res.json()
+                // window.location = '/'
             }
-            // (!res.ok)
-            //     ? res.json().then(e => Promise.reject(e))
-            //     : res.json()
+            (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
                 // window.location = '/'
         })
         .catch(err => console.log(err))

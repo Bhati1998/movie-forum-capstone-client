@@ -47,12 +47,15 @@ export default class Login extends Component {
             email: email.value,
             password: password.value,
         })
-            .then(res => {
-                email.value = ''
-                password.value = ''
-                TokenService.saveAuthToken(res.authToken)
-                TokenService.saveUserId(res.userId)
-                window.location = '/dashboard'
+            .then(data => {
+                console.log('ping')
+                this.props.setUserId(data.userId)
+                localStorage.setItem("user_id", data.userId)
+                // email.value = ''
+                // password.value = ''
+                // TokenService.saveAuthToken(data.authToken)
+                // TokenService.saveUserId(data.userId)
+                window.location.href = '/'
             })
             .then()
             .catch(res => {
