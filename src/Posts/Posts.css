@@ -1,0 +1,55 @@
+.post-card {
+    border: 2px solid lightblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.post-wrapper {
+    border: 1px solid lightblue;
+    /* margin: 5px;
+    padding: 5px; */
+    display: block;
+    margin-bottom: 5px;
+    /* flex-direction: column; */
+}
+
+.author-wrapper {
+    display: inline-flex;
+    /* text-align: left; */
+    float: left;
+    font-size: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.post-author {
+    color: blue;
+    margin-right: 5px;
+}
+
+.title-wrapper {
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+
+h5.post-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: red;
+    display: block;
+    text-align: left;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+p.post-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    padding: 5px;
+    margin: 3px;
+}

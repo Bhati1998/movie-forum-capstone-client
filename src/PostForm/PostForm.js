@@ -9,8 +9,10 @@ export default class PostForm extends Component {
             post_title: '',
             post_content: '',
             user_id: localStorage.getItem('user_id'),
-            movie_db_id: this.props.movie_db_id.movie_db_id
+            username: localStorage.getItem('username'),
+            movie_db_id: this.props.movie_db_id.movie_db_id,
         }
+        this.handleSubmitPost = this.handleSubmitPost.bind(this);
     }
 
     // checkState = (e) => {
@@ -42,11 +44,12 @@ export default class PostForm extends Component {
                 if (res.status != 201) {
                     alert('Unable to post')
                 }
-                alert('post succesful')
+                window.location = '/your-posts'
+                // alert('post succesful')
                 // (!res.ok)
                 //     ? res.json().then(e => Promise.reject(e))
                 //     : res.json()
-                    // window.location = '/'
+                // this.forceUpdate()
             })
             .catch(err => console.log(err))
         }
