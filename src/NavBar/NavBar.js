@@ -41,10 +41,8 @@ export default class Navbar extends Component {
 
     return (
       <div className="main-nav">
-        <div className="user-history">
-          <div>{/* <YourPosts /> */}</div>
+        <div className="user-posts">
           <div>
-            {/* <a href="/your-posts">{navLink}</a> */}
             {anchorChange}
           </div>
         </div>

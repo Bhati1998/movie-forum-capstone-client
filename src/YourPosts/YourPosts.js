@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Moment from 'react-moment';
 import "./YourPosts.css";
 
 const API_ENDPOINT = "http://localhost:8000";
@@ -58,28 +59,29 @@ export default class YourPosts extends Component {
       htmlOutput = this.state.posts.map((post) => {
         return (
           <div className="your-posts-card">
-              
             {/* {this.state.posts.map((post) => ( */}
-              <div className="post-wrapper">
-                <div className="author-wrapper">
-                  <div className="post-author">{localStorage.username}</div>
-                  <div className="created-date">{post.created_at}</div>
-                </div>
-                <div className="title-wrapper">
-                  <h5 className="post-title">{post.post_title}</h5>
-                </div>
-                <p className="post-content">{post.post_content}</p>
+            <div className="post-wrapper">
+              <div className='post-header-wrapper'>
+              <div className="author-wrapper">
+              <div className="post-author">{localStorage.username} <Moment format="HH:mm MM/DD/YYYY ">{post.created_at}</Moment></div>
               </div>
+              <div className="title-wrapper">
+                <h5 className="post-title">{post.post_title}</h5>
+              </div>
+              </div>
+              <p className="post-content">{post.post_content}</p>
+            </div>
           </div>
         );
       });
     }
 
     return (
-    
-    <div className="post-card">
-    <h3>{localStorage.username}'s Posts</h3>
-        {htmlOutput}
-    </div>);
+      <div>
+        <h3>{localStorage.username}'s Posts</h3>
+
+        <div className="post-card">{htmlOutput}</div>
+      </div>
+    );
   }
 }

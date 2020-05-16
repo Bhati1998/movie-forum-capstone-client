@@ -26,9 +26,16 @@ export default class Login extends Component {
     };
   }
 
-  handleLoginSuccess = () => {
-    window.location = "/";
-  };
+  // handleLoginSuccess = () => {
+  //   window.location = "/";
+  // };
+
+  redirectOnSetUser() {
+    console.log('function running')
+    if (localStorage.getItem('username') != undefined) {
+      window.location.href = '/'
+    }
+  }
 
   updateEmail(email) {
     this.setState({ email: { value: email, touched: true } });
@@ -57,20 +64,26 @@ export default class Login extends Component {
           },
         })
           .then((res) => res.json())
-          .then((data) => localStorage.setItem("username", data.username))
+          .then((data) =>  {
+            console.log(data, 'this is the data')
+          localStorage.setItem('username', data.username)
+          this.redirectOnSetUser()
+          })
+
+          // .then((data) => localStorage.setItem("username", data.username))
           .catch((err) => console.log(err));
         // localStorage.setItem("username", data.username)
         email.value = "";
         password.value = "";
         TokenService.saveAuthToken(data.authToken);
         TokenService.saveUserId(data.userId);
-        window.location.href = "/";
+        
       })
-      .then()
       .catch((res) => {
         this.setState({ error: res.error });
         this.formError();
       });
+
   };
 
   formError = () => {};

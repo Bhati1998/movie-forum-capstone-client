@@ -32,14 +32,16 @@ export default class Posts extends Component {
       <div className="post-card">
         {this.state.posts.map((post) => (
           <div className="post-wrapper">
+            <div className='post-header-wrapper'>
             <div className="author-wrapper">
-              <div className="post-author">{localStorage.username}</div>
-              <div className="created-date">
-                <Moment format="HH:mm MM/DD/YYYY ">{post.created_at}</Moment>
-              </div>
+              <div className="post-author">{localStorage.username} <Moment format="HH:mm MM/DD/YYYY ">{post.created_at}</Moment></div>
+              {/* <div className="created-date">
+                
+              </div> */}
             </div>
             <div className="title-wrapper">
               <h5 className="post-title">{post.post_title}</h5>
+            </div>
             </div>
             <p className="post-content">{post.post_content}</p>
           </div>

@@ -1,64 +1,78 @@
 .post-card {
-    /* border: 2px solid lightblue; */
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* padding: 0 50px; */
-    height: 100%;
-    text-align: center;
-    margin-bottom: 15px;
+  /* border: 2px solid lightblue; */
+  /* background-color: #FFFFFF; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 0 50px; */
+  height: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .post-wrapper {
-    /* border: 1px solid lightblue; */
-    /* margin: 5px;
+  /* border: 1px solid lightblue; */
+  /* margin: 5px;
     padding: 5px; */
-    min-width: 100%;
-    display: block;
-    margin-bottom: 5px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    font-family: 'Montserrat', sans-serif;
-    /* flex-direction: column; */
+  margin-bottom: 10px;
+  min-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  font-family: "Montserrat", sans-serif;
+  /* flex-direction: column; */
+}
+
+.post-header-wrapper {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  -ms-flex-align: center;
+  /* align-items: center; */
+  color: var(--newCommunityTheme-bodyText);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  line-height: 20px;
+  background-image: linear-gradient(orange, yellow);
 }
 
 .author-wrapper {
-    display: inline-flex;
-    /* text-align: left; */
-    float: left;
-    font-size: 10px;
-    margin-left: 2px;
-    margin-top: 5px;
+  margin-left: 5px;
+  margin-top: 2px;
 }
 
 .post-author {
-    color: blue;
-    margin-right: 5px;
+  color: black;
+  margin-right: 5px;
 }
 
 .title-wrapper {
-    display: block;
-    width: 100%;
-    margin: 0px;
+  display: block;
+  width: 100%;
+  margin: 0px;
 }
 
 h5.post-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    margin-bottom: 2px;
-    color: black;
-    display: block;
-    text-align: left;
-    margin-left: 5px;
-    padding: 2px;
+  /* font-family: "Oswald", sans-serif; */
+  font-size: 14px;
+  margin-bottom: 0px;
+  color: black;
+  display: block;
+  text-align: left;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  padding: 2px;
 }
 
 p.post-content {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    display: block;
-    text-align: left;
-    padding: 5px;
-    margin: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+  padding: 5px;
+  margin: 3px;
 }
