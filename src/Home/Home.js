@@ -199,17 +199,17 @@ class Home extends React.Component {
 
         return (
             <div>
-                <form onSubmit={this.handleSearch}>
-                    <label>Search:</label>
+                <form className='search-form' onSubmit={this.handleSearch}>
+                    <label>Search </label>
                     <input type='text'
                         name='searchTerm'
                         className='search-bar'
                         placeholder='Batman'
                         required />
-                    <button type="submit" onClick={this.handleListRender}>search</button>
+                    <button type="submit" className='search-button' onClick={this.handleListRender}>search</button>
                 </form>
                     {this.state.isSearchTriggered ? 
-                    (<ul className="movie-list">
+                    (<ul className="movie-list className='container form-container search-container'">
                         {this.state.movies.map(movie =>
                             (<li key={movie.movie_db_id}>
                                 <MovieList

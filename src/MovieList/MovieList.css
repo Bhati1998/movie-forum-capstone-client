@@ -1,10 +1,16 @@
 .movie-card {
-    margin-top: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5px;
+    height: 100%;
+    text-align: center;
     margin-bottom: 20px;
-    border: 2px solid darkslategray;
-    border-radius: 5px;
-    box-shadow: 5px 10px;
-    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .title {
@@ -13,6 +19,21 @@
 }
 
 .genre, .rating, .overview {
-    font-family: 'Open Sans', sans-serif;
+    margin: 5px;
+
 }
 
+/* .movie-container {
+	position: relative;
+	top: 0;
+	transition: all 0.6s ease-in-out;
+} */
+
+.movie-img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+p.overview {
+    padding: 8px;
+}

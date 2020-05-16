@@ -1,4 +1,138 @@
-.login-page {
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f6f5f7;
+	display: flex;
+	/* justify-content: center; */
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+h1 {
+	font-weight: bolder;
+    margin: 0;
+    /* margin-bottom: 20px; */
+    font-size: 80px;
+    text-shadow: 2px 2px #FF4B2B;
+}
+
+h2 {
+	text-align: center;
+}
+
+h5 {
+    margin-top: 0px;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    margin: 8px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.login-form {
+    box-shadow: none;
+}
+
+input {
+	background-color: #eee;
+    border: none;
+    border-radius: 4px;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.input-error {
+    margin: 0 0 8px
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 350px;
+}
+
+.form-container {
+	position: relative;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.registration-link-wrapper {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+
+
+/* .login-page {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -6,7 +140,7 @@
     height: 400px;
     background-color: #aaa;
     margin-bottom: 20px;
-}
+} */
 
 /* .create-post {
     margin-left: auto;

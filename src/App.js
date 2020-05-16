@@ -64,6 +64,7 @@ class App extends Component {
         {/* <Homepage /> */}
         <header>
           <h1>MovieChat</h1>
+          <h5>Discuss, critique and review movies you love, hate, and can't wait to see</h5>
           {/* <Link to='/'><h1>MovieChat</h1></Link> */}
         </header>
         <Router>

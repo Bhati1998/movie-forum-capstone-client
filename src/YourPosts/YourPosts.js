@@ -57,7 +57,8 @@ export default class YourPosts extends Component {
       console.log("inside else");
       htmlOutput = this.state.posts.map((post) => {
         return (
-          <div className="post-card">
+          <div className="your-posts-card">
+              
             {/* {this.state.posts.map((post) => ( */}
               <div className="post-wrapper">
                 <div className="author-wrapper">
@@ -74,6 +75,11 @@ export default class YourPosts extends Component {
       });
     }
 
-    return <div className="post-card">{htmlOutput}</div>;
+    return (
+    
+    <div className="post-card">
+    <h3>{localStorage.username}'s Posts</h3>
+        {htmlOutput}
+    </div>);
   }
 }

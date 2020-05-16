@@ -1,4 +1,5 @@
 import  React, { Component } from 'react'; 
+import './PostForm.css'
 
 const API_ENDPOINT = 'http://localhost:8000'
 
@@ -58,12 +59,12 @@ export default class PostForm extends Component {
     render() {
         console.log(this.state, 'this is the state', this.props.props, 'this is the props')
         return (
-            <form onSubmit={this.handleSubmitPost}>
+            <form className ='post-form' onSubmit={this.handleSubmitPost}>
                 Post Title
-                <input type="text" name="title" placeholder="title" onChange={this.handleTitleChange} />
+                <input id='title-input' type="text" name="title" placeholder="title" onChange={this.handleTitleChange} />
                 Post Content
-                <input type="text" name="content" placeholder="content" onChange={this.handleContentChange} />
-                <button type="submit" onClick={this.checkState}>Create</button>
+                <input id='content-input' type="text" name="content" placeholder="content" onChange={this.handleContentChange} />
+                <button id='submit-post' type="submit" onClick={this.checkState}>Submit Post</button>
             </form>
         )
     }

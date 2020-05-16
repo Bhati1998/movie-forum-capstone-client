@@ -105,7 +105,8 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="login-page">
+      <div className="container" id="container">
+          <div className="form-container sign-in-container">
         <h2>Log in</h2>
         <form className="login-form" onSubmit={this.handleSubmitJwtAuth}>
           <div className="login-form-entry">
@@ -135,6 +136,10 @@ export default class Login extends Component {
             )}
           </div>
           <button type="submit">Log in</button>
+          <div className="registration-link-wrapper">
+              <a href='/register'>Don't have an account? Register here</a>
+          </div>
+          
           <div className="error-message">{this.state.error}</div>
           {/* <div className='demo-info'>
                         <p className='login-form-p'><b>To view a demo use:</b></p>
@@ -142,6 +147,7 @@ export default class Login extends Component {
                         <p className='login-form-p'><b>Password:</b> password1</p>
                     </div> */}
         </form>
+        </div>
       </div>
     );
   }

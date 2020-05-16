@@ -14,8 +14,10 @@ export default class MovieList extends Component {
     render() {
         // console.log(this.props.release_yr, 'this should be the year')
         return (
-            <div className='movie-card'>
-                <img src={this.props.img} alt='Movie' />
+            <div className='movie-card container movie-container'>
+                <div>
+                <img className='movie-img' src={this.props.img} alt='Movie' />
+                </div>
                 {/* <Link to={{
                     pathname: `/movie/${this.props.movie_title}`,
                     component:{MoviePage},

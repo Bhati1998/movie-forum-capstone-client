@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostForm from '../PostForm/PostForm';
+import './CreatePost.css'
 
 export default class CreatePost extends Component {
     constructor(props) {
@@ -19,8 +20,8 @@ export default class CreatePost extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={(e) => this.handleFormRender(e)}>Create Post</button>
+            <div className='create-form'>
+                <button className='create-button' onClick={(e) => this.handleFormRender(e)}>Create Post</button>
                 {this.state.isButtonClicked ? <PostForm movie_db_id={this.props}/> : null }
             </div>
         )
