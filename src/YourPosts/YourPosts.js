@@ -63,7 +63,7 @@ export default class YourPosts extends Component {
             <div className="post-wrapper">
               <div className='post-header-wrapper'>
               <div className="author-wrapper">
-              <div className="post-author">{localStorage.username} <Moment format="HH:mm MM/DD/YYYY ">{post.created_at}</Moment></div>
+              <div className="post-author">{post.username} <Moment format="HH:mm MM/DD/YYYY ">{post.created_at}</Moment></div>
               </div>
               <div className="title-wrapper">
                 <h5 className="post-title">{post.post_title}</h5>

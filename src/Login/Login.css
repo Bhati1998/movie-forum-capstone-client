@@ -44,10 +44,14 @@ span {
 }
 
 a {
-	color: #333;
+	color: white;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
+}
+
+#register-link {
+	color: black;
 }
 
 button {
@@ -116,6 +120,8 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 350px;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .form-container {
@@ -131,30 +137,8 @@ input {
 }
 
 
-
-/* .login-page {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 400px;
-    background-color: #aaa;
-    margin-bottom: 20px;
-} */
-
-/* .create-post {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 400px;
-    background-color: #aaa;
-    margin-bottom: 20px;
+@media screen and (max-width: 400px) {
+	h1 {
+		font-size: 20px;
+	}
 }
-
-.search {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 400px;
-    background-color: #aaa;
-} */

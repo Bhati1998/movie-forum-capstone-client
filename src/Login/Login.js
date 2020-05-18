@@ -150,7 +150,7 @@ export default class Login extends Component {
           </div>
           <button type="submit">Log in</button>
           <div className="registration-link-wrapper">
-              <a href='/register'>Don't have an account? Register here</a>
+              <a id='register-link' href='/register'>Don't have an account? Register here</a>
           </div>
           
           <div className="error-message">{this.state.error}</div>

@@ -33,7 +33,7 @@ export default class MovieList extends Component {
                 <p className='overview'>{this.props.overview}</p>
 
                 <CreatePost movie_db_id={this.props.movie_db_id}/>
-                <Posts movie_db_id={this.props.movie_db_id}/>
+                <Posts movie_db_id={this.props.movie_db_id} />
                 
             </div>
             // <div className='movie-card'>

@@ -32,12 +32,14 @@
   -ms-flex-align: center;
   /* align-items: center; */
   color: var(--newCommunityTheme-bodyText);
+  border: 1px solid #FF4B2B;
+  border-radius: 2px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   line-height: 20px;
-  background-image: linear-gradient(orange, yellow);
+  background-color: #FF4B2B;
 }
 
 .author-wrapper {
@@ -46,7 +48,7 @@
 }
 
 .post-author {
-  color: black;
+  color: white;
   margin-right: 5px;
 }
 
@@ -60,7 +62,7 @@ h5.post-title {
   /* font-family: "Oswald", sans-serif; */
   font-size: 14px;
   margin-bottom: 0px;
-  color: black;
+  color: white;
   display: block;
   text-align: left;
   margin-left: 5px;
@@ -75,4 +77,5 @@ p.post-content {
   text-align: left;
   padding: 5px;
   margin: 3px;
+  text-align: left;
 }
