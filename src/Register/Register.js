@@ -55,13 +55,12 @@ export default class Register extends Component {
   handleSubmitBasicAuth = (ev) => {
     ev.preventDefault();
     const {
-      firstName,
-      lastName,
       userName,
       email,
       password,
-      repeatPassword,
+      repeatPassword
     } = ev.target;
+    console.log(userName.value, email.value, password.value)
     this.setState({ error: null });
     AuthApiService.postUser({
       username: userName.value,
@@ -69,16 +68,16 @@ export default class Register extends Component {
       password: password.value,
     })
       .then((user) => {
-        firstName.value = "";
-        lastName.value = "";
+        console.log(user, 'this is user')
         userName.value = "";
         email.value = "";
         password.value = "";
         repeatPassword.value = "";
-        this.handleLoginSuccess();
+        // this.handleLoginSuccess();
       })
-      .catch((res) => {
-        this.setState({ error: res.error });
+      .catch((err) => {
+        console.log(err)
+        this.setState({ error: err });
       });
   };
 

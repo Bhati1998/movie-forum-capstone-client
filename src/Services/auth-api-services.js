@@ -41,8 +41,11 @@ const AuthApiService = {
             body: JSON.stringify(user),
         })
             .then(res => {
-                console.log(res.status)
-                if (res.status != 201) {
+                console.log(res.error)
+                if (res.status == 400) {
+                    alert('username or email is already taken')
+                }
+                else if (res.status != 201) {
                     alert('could not create user')
                 }
                 else {

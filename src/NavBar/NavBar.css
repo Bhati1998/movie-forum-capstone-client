@@ -24,8 +24,9 @@
 } */
 
 .login {
-    margin-right: 15px;
+    /* margin-right: 8px; */
     float: right;
+    margin-right: 2px;
 }
 
 .login, .user-posts {

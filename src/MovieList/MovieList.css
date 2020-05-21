@@ -16,6 +16,7 @@
 .title {
     font-family: 'Oswald', sans-serif;
     font-size: 26px;
+    line-height: 1;
 }
 
 .genre, .rating, .overview {

@@ -10,7 +10,7 @@ import CreatePost from "./CreatePost/CreatePost";
 import { API_ENDPOINT } from "./config";
 import Home from "./Home/Home";
 import MoviePage from "./MoviePage/MoviePage";
-import YourPosts from './YourPosts/YourPosts';
+import YourPosts from "./YourPosts/YourPosts";
 import "./App.css";
 
 class App extends Component {
@@ -46,7 +46,6 @@ class App extends Component {
   // }
   // }
 
-
   render() {
     //   const contextValue = {
     //     notes: this.state.notes,
@@ -64,20 +63,29 @@ class App extends Component {
         {/* <Homepage /> */}
         <header>
           <h1>MovieChat</h1>
-          <h5>Discuss, critique and review movies you love, hate, and can't wait to see</h5>
+          <h5>
+            Discuss, critique and review movies you love, hate, and can't wait
+            to see
+          </h5>
           {/* <Link to='/'><h1>MovieChat</h1></Link> */}
         </header>
         <Router>
           <main className="homepage">
             <Switch>
-              <Route exact path="/" render={(props) => (
+              <Route
+                exact
+                path="/"
+                render={(props) => (
                   <Home {...props} userId={this.state.user_id} />
                 )}
               />
               <Route
                 path="/login"
                 render={(props) => (
-                  <Login {...props} setUserId={(userId) => this.setUserId(userId)} />
+                  <Login
+                    {...props}
+                    setUserId={(userId) => this.setUserId(userId)}
+                  />
                 )}
               />
               <Route path="/register" component={Register} />
@@ -87,6 +95,29 @@ class App extends Component {
             </Switch>
           </main>
         </Router>
+        <footer>
+          <a
+            href="https://www.linkedin.com/in/christian-m-george"
+            className="linkedin-icon"
+            target="_blank"
+          >
+            <i className="fa fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/christian-m-george"
+            className="github-icon"
+            target="_blank"
+          >
+            <i className="fa fa-github"></i>
+          </a>
+          <a
+            href="https://christian-m-george.github.io/portfolio/"
+            className="portfolio-icon"
+            target="_blank"
+          >
+            <i class="fa fa-address-card"></i>
+          </a>
+        </footer>
       </div>
     );
   }
