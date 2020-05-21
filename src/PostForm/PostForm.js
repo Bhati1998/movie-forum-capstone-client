@@ -1,7 +1,7 @@
 import  React, { Component } from 'react'; 
 import './PostForm.css'
-
-const API_ENDPOINT = 'http://localhost:8000'
+import config from '../config'
+// const API_ENDPOINT = 'http://localhost:8000'
 
 export default class PostForm extends Component {
     constructor(props) {
@@ -32,7 +32,7 @@ export default class PostForm extends Component {
     handleSubmitPost = (event) => {
         event.preventDefault()
         console.log('function triggering')
-            fetch(`${API_ENDPOINT}/posts`, {
+            fetch(`${config.API_ENDPOINT}/posts`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

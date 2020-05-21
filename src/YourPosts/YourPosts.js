@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Moment from 'react-moment';
 import "./YourPosts.css";
+import config from '../config'
 
-const API_ENDPOINT = "http://localhost:8000";
+// const API_ENDPOINT = "http://localhost:8000";
 
 export default class YourPosts extends Component {
   state = {
@@ -12,7 +13,7 @@ export default class YourPosts extends Component {
 
   componentDidMount() {
     console.log("running api call");
-    fetch(`${API_ENDPOINT}/posts/user/${localStorage.getItem("user_id")}`, {
+    fetch(`${config.API_ENDPOINT}/posts/user/${localStorage.getItem("user_id")}`, {
       method: "get",
       headers: {
         "content-type": "application/json",
@@ -29,7 +30,7 @@ export default class YourPosts extends Component {
   }
 
   getMovieById(movie_db_id) {
-    fetch(`${API_ENDPOINT}/movies-by-id/${movie_db_id}`, {
+    fetch(`${config.API_ENDPOINT}/movies-by-id/${movie_db_id}`, {
       method: "get",
       headers: {
         "content-type": "application/json",

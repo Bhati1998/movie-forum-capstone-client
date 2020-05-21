@@ -3,7 +3,9 @@
 My Lego® Inventory was created by Teresa Bacigalupi (a Lego® Technic fan) using the following tools:
 
 ## Working Prototype
-You can access a working prototype of the app here: https://legoinventory.herokuapp.com/ and
+You can access a working prototype of the node app here: https://movie-forum-capstone-server.herokuapp.com/ 
+
+You can access a working prototype of the react app here:
 
 ## User Stories
 This app is for two types of users; a visitor, and a logged-in user

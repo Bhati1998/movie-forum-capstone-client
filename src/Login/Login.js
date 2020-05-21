@@ -3,8 +3,8 @@ import ValidationError from "../validation-error";
 import TokenService from "../Services/token-services";
 import AuthApiService from "../Services/auth-api-services";
 import "./Login.css";
-
-const API_ENDPOINT = "http://localhost:8000";
+import config from '../config'
+// const API_ENDPOINT = "http://localhost:8000";
 
 export default class Login extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ export default class Login extends Component {
         console.log(data, "this is the data from auth");
         this.props.setUserId(data.userId);
         localStorage.setItem("user_id", data.userId);
-        fetch(`${API_ENDPOINT}/user/id/${data.userId}`, {
+        fetch(`${config.API_ENDPOINT}/user/id/${data.userId}`, {
           method: "get",
           headers: {
             "content-type": "application/json",

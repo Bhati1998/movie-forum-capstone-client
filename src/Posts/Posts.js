@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Moment from 'react-moment';
 import "./Posts.css";
-
-const API_ENDPOINT = "http://localhost:8000";
+import config from '../config'
+// const API_ENDPOINT = "http://localhost:8000";
 
 export default class Posts extends Component {
   state = {
@@ -10,7 +10,7 @@ export default class Posts extends Component {
   };
 
   componentDidMount() {
-    fetch(`${API_ENDPOINT}/posts/${this.props.movie_db_id}`, {
+    fetch(`${config.API_ENDPOINT}/posts/${this.props.movie_db_id}`, {
       method: "get",
       headers: {
         "content-type": "application/json",

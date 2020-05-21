@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import MovieList from '../MovieList/MovieList'
 import TokenService from '../Services/token-services'
 import './Home.css'
+import config from '../config'
 
-const API_ENDPOINT = 'http://localhost:8000'
+// const API_ENDPOINT = 'http://localhost:8000'
 
 
 class Home extends React.Component {
@@ -107,7 +108,7 @@ class Home extends React.Component {
         // console.log(this.state.params, 'this is the state.params')
 
         //get the google books api url
-        const searchURL = `${API_ENDPOINT}/movie/search/`
+        const searchURL = `${config.API_ENDPOINT}/movie/search/`
 
         //format the queryString paramters into an object
         const queryString = this.formatQueryParams(data)
