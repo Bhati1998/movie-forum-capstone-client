@@ -1,9 +1,8 @@
 # Movie Forum Capstone
-
-My Lego® Inventory was created by Teresa Bacigalupi (a Lego® Technic fan) using the following tools:
+This app allows users to communicate on movies that they're interested in! The application allows for users to search a vast database of movies and communicate with other users by leaving comments on each movie. Spoilers beware!
 
 ## Working Prototype
-You can access a working prototype of the node app here: https://movie-forum-capstone-server.herokuapp.com/ 
+You can access a working prototype of the node app here: https://movie-forum-capstone-server.herokuapp.com/ and react here https://movie-forum-capstone-client.herokuapp.com/ 
 
 You can access a working prototype of the react app here:
 

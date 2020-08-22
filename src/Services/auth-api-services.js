@@ -1,5 +1,4 @@
 import config from '../config'
-// const API_ENDPOINT = 'http://localhost:8000'
 
 const AuthApiService = {
     postLogin(credentials) {
