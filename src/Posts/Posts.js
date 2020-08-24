@@ -35,8 +35,8 @@ export default class Posts extends Component {
     // console.log(this.props, 'these are props within post')
     return (
       <div className="post-card">
-        {this.state.posts.map((post) => (
-          <div className="post-wrapper">
+        {this.state.posts.map((post, index) => (
+          <div className="post-wrapper" key={index}>
             <div className='post-header-wrapper'>
             <div className="author-wrapper">
               <div className="post-author">{post.username} <Moment format="HH:mm MM/DD/YYYY ">{post.created_at}</Moment></div>

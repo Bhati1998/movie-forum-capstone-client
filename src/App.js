@@ -115,7 +115,7 @@ class App extends Component {
             className="portfolio-icon"
             target="_blank"
           >
-            <i class="fa fa-address-card"></i>
+            <i className="fa fa-address-card"></i>
           </a>
         </footer>
       </div>

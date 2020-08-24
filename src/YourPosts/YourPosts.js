@@ -57,9 +57,9 @@ export default class YourPosts extends Component {
       );
     } else {
       console.log("inside else");
-      htmlOutput = this.state.posts.map((post) => {
+      htmlOutput = this.state.posts.map((post, index) => {
         return (
-          <div className="your-posts-card">
+          <div className="your-posts-card" key={index}>
             {/* {this.state.posts.map((post) => ( */}
             <div className="post-wrapper">
               <div className='post-header-wrapper'>
