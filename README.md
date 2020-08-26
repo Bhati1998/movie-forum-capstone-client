@@ -47,19 +47,18 @@ Users are able to comment on the post of other users, or on their own posts
 ## Screenshots
 Landing/Login Page |
 :-------------------------:|
-![Landing Page](/github-images/login-page.png)  | 
+![Landing Page](/github-images/screenshots/landing-page.png)  | 
 
 ![Login Page](/github-images/login-page.png)  | 
 
-![Registration Page](/github-images/login-page.png)  | 
+![Registration Page](/github-images/register-page.png)  | 
 
-![Search Results Page](/github-images/login-page.png)  | 
+![Search Results Page](/github-images/search-results.png)  | 
 
-![Your Results Page](/github-images/login-page.png)  | 
+![Your Results Page](/github-images/user-posts.png)  | 
 
 ## Functionality
 The app's functionality includes:
-Search feature looks for user's number (XXXXX) and possible Rebrickable number (XXXXX-1)
 
 * Every User has the ability to create an account that stores information unique to them
 * User can Search Movies and Create Posts
