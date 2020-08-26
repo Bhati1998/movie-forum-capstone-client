@@ -213,6 +213,9 @@ export default class Register extends Component {
           <div className='sign-up-button-wrapper'>
           <button type="submit">Sign up</button>
           </div>
+          <div className="login-link-wrapper">
+              <a id='login-link' href='/'>Already have an account? Login here</a>
+          </div>
         </form>
       </div>
     );

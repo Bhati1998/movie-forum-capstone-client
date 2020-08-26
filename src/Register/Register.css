@@ -17,3 +17,16 @@
 .sign-up-error {
     opacity: inherit;
 }
+
+.login-link-wrapper {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.login-link-wrapper a {
+    color: black;
+}
+
+.login-link-wrapper a:hover {
+    color: rgb(9, 24, 155);
+}

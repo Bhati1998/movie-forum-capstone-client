@@ -33,7 +33,7 @@ class Home extends React.Component {
         this.setState({
             user_id: localStorage.user_id
         });
-      }
+    }
     
 
     // if an integer is empty, undefinded or null, default it to 0

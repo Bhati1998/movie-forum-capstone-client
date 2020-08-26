@@ -74,13 +74,17 @@ class App extends Component {
             <Switch>
               <Route
                 exact
-                path="/"
+                path="/home"
                 render={(props) => (
                   <Home {...props} userId={this.state.user_id} />
                 )}
               />
+              <Route exact path="/register" component={Register} />
+              {/* <Route path="/post" component={CreatePost} />
+              <Route path="/movie" component={MoviePage} /> */}
+              <Route exact path="/your-posts" component={YourPosts} />
               <Route
-                path="/login"
+                path="/"
                 render={(props) => (
                   <Login
                     {...props}
@@ -88,10 +92,6 @@ class App extends Component {
                   />
                 )}
               />
-              <Route path="/register" component={Register} />
-              <Route path="/post" component={CreatePost} />
-              <Route path="/movie" component={MoviePage} />
-              <Route path="/your-posts" component={YourPosts} />
             </Switch>
           </main>
         </Router>

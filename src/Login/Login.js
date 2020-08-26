@@ -33,7 +33,7 @@ export default class Login extends Component {
   redirectOnSetUser() {
     console.log('function running')
     if (localStorage.getItem('username') != undefined) {
-      window.location.href = '/'
+      window.location.href = '/home'
     }
   }
 

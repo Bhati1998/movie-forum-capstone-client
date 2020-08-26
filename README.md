@@ -29,19 +29,19 @@ Registration
 User enters username and confirms password -> if criteria is not met an alert is generated -> once criteria is met user is directed to homepage
 
 Login
-https://repl.it/@ChristianGeorge/Capstone-Login
+!https://repl.it/@ChristianGeorge/Capstone-Login
 User logs in with username and password -> user is notified if criteria is incorrect -> user can click a link to generate an email to reset password -> once user is logged in, user is directed to homepage
 
 HomePage
-https://repl.it/@ChristianGeorge/Capstone-Homepage
+!https://repl.it/@ChristianGeorge/Capstone-Homepage
 User is able to see nav bar at top, trending movies/tv, and the search section below -> user can click on the trending movies to be directed to posts on that topic -> user can use search feature to search for specific media
 
 Create Post
-https://repl.it/@ChristianGeorge/CumbersomeNutritiousLinkedlist
+!https://repl.it/@ChristianGeorge/CumbersomeNutritiousLinkedlist
 User is able to create a post wiht a chosen title and content -> user can submit that post to be viewed on the homepage and in relation to other topics
 
 Comment on Post
-https://repl.it/@ChristianGeorge/Capstone-Comment-on-post
+!https://repl.it/@ChristianGeorge/Capstone-Comment-on-post
 Users are able to comment on the post of other users, or on their own posts
 
 ## Screenshots
