@@ -49,13 +49,20 @@ Landing/Login Page |
 :-------------------------:|
 ![Landing Page](/github-images/login-page.png)  | 
 
+![Login Page](/github-images/login-page.png)  | 
+
+![Registration Page](/github-images/login-page.png)  | 
+
+![Search Results Page](/github-images/login-page.png)  | 
+
+![Your Results Page](/github-images/login-page.png)  | 
+
 ## Functionality
 The app's functionality includes:
 Search feature looks for user's number (XXXXX) and possible Rebrickable number (XXXXX-1)
 
 * Every User has the ability to create an account that stores information unique to them
-* User can Add Entries, Update Entries, and Delete Entries
-* User can sort entries by: Date & Type (Read, Seen, Performed)
+* User can Search Movies and Create Posts
 
 ## Business Objects (database structure)
 * User (collection)
@@ -90,11 +97,6 @@ Search feature looks for user's number (XXXXX) and possible Rebrickable number (
 
 ## Responsive
 App is built to be usable on mobile devices, as well as responsive across mobile, tablet, laptop, and desktop screen resolutions.
-
-## Development Roadmap
-This is v1.0 of the app, but future enhancements are expected to include:
-* Wishlist (from the inventory page part details);
-        (1) see how many parts there are in the Wishlist
 
 ## How to run it
 Use command line to navigate into the project folder and run the following in terminal
