@@ -104,6 +104,8 @@ class Home extends React.Component {
             params: data
         })
 
+        //add comment
+
         //check if the state is populated with the search params data
         // console.log(this.state.params, 'this is the state.params')
 
