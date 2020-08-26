@@ -52,10 +52,6 @@ a {
 	margin: 15px 0;
 }
 
-#register-link {
-	color: black;
-}
-
 button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
@@ -138,7 +134,11 @@ input {
     margin-bottom: 25px;
 }
 
-.register-link-wrapper a:hover {
+.registration-link-wrapper a {
+    color: black;
+}
+
+.registration-link-wrapper a:hover {
     color: rgb(9, 24, 155);
 }
 

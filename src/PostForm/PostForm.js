@@ -45,7 +45,7 @@ export default class PostForm extends Component {
                 if (res.status != 201) {
                     alert('Unable to post')
                 }
-                // window.location = '/your-posts'
+                window.location = '/your-posts'
                 // alert('post succesful')
                 // (!res.ok)
                 //     ? res.json().then(e => Promise.reject(e))
