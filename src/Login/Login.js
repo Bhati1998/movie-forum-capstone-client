@@ -148,6 +148,7 @@ export default class Login extends Component {
               <ValidationError message={this.validatePassword()} />
             )}
           </div>
+          <div className='demo-credentials'>Demo Username = DemoUser; Demo Password = DemoPW1</div>
           <button type="submit">Log in</button>
           <div className="registration-link-wrapper">
               <a id='register-link' href='/register'>Don't have an account? Register here</a>

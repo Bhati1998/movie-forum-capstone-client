@@ -12,7 +12,7 @@ export default class YourPosts extends Component {
   };
 
   componentDidMount() {
-    console.log("running api call");
+    console.log(localStorage.getItem("user_id"));
     fetch(`${config.API_ENDPOINT}/posts/user/${localStorage.getItem("user_id")}`, {
       method: "get",
       headers: {
@@ -21,7 +21,7 @@ export default class YourPosts extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         this.setState({
           posts: data,
         });
