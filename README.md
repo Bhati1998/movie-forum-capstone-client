@@ -20,10 +20,6 @@ This app is for two types of users; a visitor, and a logged-in user
 * so I can create a personal Lego® inventory
 
 ### Wireframe
-Landing/Login Page |
-:-------------------------:|
-![Landing/Login Page](/github-images/wireframes/Landing-Page.png)  |
-
 Registration 
 !https://repl.it/@ChristianGeorge/Capstone-Login-Wireframe
 User enters username and confirms password -> if criteria is not met an alert is generated -> once criteria is met user is directed to homepage
@@ -49,13 +45,13 @@ Landing/Login Page |
 :-------------------------:|
 ![Landing Page](/github-images/screenshots/landing-page.png)  | 
 
-![Login Page](/github-images/login-page.png)  | 
+![Login Page](/github-images/screenshots/login-page.png)  | 
 
-![Registration Page](/github-images/register-page.png)  | 
+![Registration Page](/github-images/screenshots/register-page.png)  | 
 
-![Search Results Page](/github-images/search-results.png)  | 
+![Search Results Page](/github-images/screenshots/search-results.png)  | 
 
-![Your Results Page](/github-images/user-posts.png)  | 
+![Your Results Page](/github-images/screenshots/user-posts.png)  | 
 
 ## Functionality
 The app's functionality includes:
