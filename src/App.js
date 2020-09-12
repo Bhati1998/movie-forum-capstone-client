@@ -5,7 +5,6 @@ import Redirect from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
 import Login from "./Login/Login";
 import Register from "./Register/Register";
-import Homepage from "./Homepage/Homepage";
 import CreatePost from "./CreatePost/CreatePost";
 import { API_ENDPOINT } from "./config";
 import Home from "./Home/Home";
@@ -17,57 +16,25 @@ class App extends Component {
   state = {
     user_id: "",
     movie_db_id: "",
-  };
+  }
 
   setUserId = (userId) => {
     this.setState({
       user_id: userId,
-    });
-  };
-  // getMovieData(searchTerm) {
-  // 	const url = `${API_ENDPOINT}/movie/search/${searchTerm}`
-  // 	fetch(url)
-  // 		.then(response => {
-  // 			if (!response.ok) {
-  // 				throw new Error(response.statusText);
-  // 			}
-  // 			return response.json();
-  // 		})
-  // 		.then(data => {
-  // 		console.log(data)
-  // 			this.setState({
-  // 				wineData: data,
-  // 				 hidediv: true
-  // 		})
-  // 	})
-  // 		.catch(err => {
-  // 			console.log(err);
-  // 		});
-  // }
-  // }
+    })
+  }
 
   render() {
-    //   const contextValue = {
-    //     notes: this.state.notes,
-    //     folders: this.state.folders,
-    //     deleteNote: this.handleDeleteNote,
-    //     addFolder: this.addFolder,
-    //     addNote: this.addNote,
-    //     addErrorNotes: this.addErrorNotes,
-    //     notesError: this.notesError
-    //   }
 
     return (
       <div className="App">
         <NavBar />
-        {/* <Homepage /> */}
         <header>
           <h1>MovieChat</h1>
           <h5>
             Discuss, critique and review movies you love, hate, and can't wait
             to see
           </h5>
-          {/* <Link to='/'><h1>MovieChat</h1></Link> */}
         </header>
         <Router>
           <main className="homepage">
@@ -80,8 +47,6 @@ class App extends Component {
                 )}
               />
               <Route exact path="/register" component={Register} />
-              {/* <Route path="/post" component={CreatePost} />
-              <Route path="/movie" component={MoviePage} /> */}
               <Route exact path="/your-posts" component={YourPosts} />
               <Route
                 path="/"
@@ -119,8 +84,8 @@ class App extends Component {
           </a>
         </footer>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

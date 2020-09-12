@@ -32,7 +32,7 @@ class Home extends React.Component {
     componentDidMount(){
         this.setState({
             user_id: localStorage.user_id
-        });
+        })
     }
     
 
@@ -146,9 +146,9 @@ class Home extends React.Component {
             // use the json api output
             .then(data => {
 
-                console.log(data, 'this is the data')
+                // console.log(data, 'this is the data')
                 if (data.length == 0) {
-                    console.log('error')
+                    // console.log('error')
                     throw new Error('No movies found')
                 }
 
@@ -173,7 +173,7 @@ class Home extends React.Component {
                 })
 
                 //check if the validated data is structured in a new array objects
-                console.log(movies);
+                // console.log(movies)
 
                 //send all the results to the state
                 this.setState({
@@ -185,7 +185,7 @@ class Home extends React.Component {
 
             //catch connection errors
             .catch(err => {
-                console.log(err)
+                // console.log(err)
                 this.setState({
                     error: err.message
                 })
@@ -196,9 +196,9 @@ class Home extends React.Component {
     render() {
         const errorMessage = this.state.error ? <div>{this.state.error}</div> : false
 
-        console.log('this is the state', this.state)
+        // console.log('this is the state', this.state)
 
-        console.log(TokenService.getUserId(), 'this is the user id***********')
+        // console.log(TokenService.getUserId(), 'this is the user id***********')
 
         return (
             <div>

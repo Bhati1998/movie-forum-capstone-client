@@ -16,7 +16,7 @@ const TokenService = {
         return window.btoa(`${email}:${password}`)
     },
     saveUserId(userId) {
-        return window.sessionStorage.setItem('user_id', userId);
+        return window.sessionStorage.setItem('user_id', userId)
     },
     getUserId(user_id) {
         return window.sessionStorage.getItem('user_id', user_id)

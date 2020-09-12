@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import Moment from 'react-moment';
 import "./Posts.css";
-import config from '../config'
-// const API_ENDPOINT = "http://localhost:8000";
+import config from '../config';
 
 export default class Posts extends Component {
   state = {
     posts: [],
-  };
+  }
 
   componentDidMount() {
     fetch(`${config.API_ENDPOINT}/posts/${this.props.movie_db_id}`, {
@@ -18,16 +17,16 @@ export default class Posts extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "this is is the data");
+        // console.log(data, "this is is the data")
         this.setState({
           posts: data,
-        });
+        })
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }
 
   rerenderParentCallback() {
-    this.forceUpdate();
+    this.forceUpdate()
   }
 
   render() {
@@ -52,6 +51,6 @@ export default class Posts extends Component {
           </div>
         ))}
       </div>
-    );
+    )
   }
 }

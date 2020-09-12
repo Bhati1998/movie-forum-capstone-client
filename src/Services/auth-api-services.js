@@ -2,7 +2,7 @@ import config from '../config'
 
 const AuthApiService = {
     postLogin(credentials) {
-        console.log(credentials, 'these are the credentials')
+        // console.log(credentials, 'these are the credentials')
 
         return fetch(`${config.API_ENDPOINT}/auth/login`, {
             method: 'POST',
@@ -13,7 +13,7 @@ const AuthApiService = {
             
         })
         .then(res => {
-            console.log(res.status)
+            // console.log(res.status)
             if (res.status != 200) {
                 alert('Invalid login details')
             }
@@ -39,7 +39,7 @@ const AuthApiService = {
             body: JSON.stringify(user),
         })
             .then(res => {
-                console.log(res.error)
+                // console.log(res.error)
                 if (res.status == 400) {
                     alert('username or email is already taken')
                 }

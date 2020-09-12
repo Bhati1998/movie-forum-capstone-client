@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faPlus, faChevronLeft, faTrashAlt, faCheckDouble
 } from '@fortawesome/free-solid-svg-icons'
-import App from './App'
+import NavBar from './NavBar'
 
 library.add(faPlus, faChevronLeft, faTrashAlt, faCheckDouble)
 
@@ -13,7 +13,7 @@ it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(
     <BrowserRouter>
-      <App />
+      <NavBar />
     </BrowserRouter>,
     div
   )

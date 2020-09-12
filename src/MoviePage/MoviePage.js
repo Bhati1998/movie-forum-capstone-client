@@ -9,7 +9,7 @@ export default class MoviePage extends Component {
     
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const { average_rating, genre, img, movie_db_id, movie_title, overview, release_year } = this.props.location.state.movie
         return (
             <>

@@ -3,41 +3,41 @@ import "./NavBar.css";
 
 export default class Navbar extends Component {
   onLogout = (e) => {
-    localStorage.removeItem("user_id");
-    localStorage.removeItem("username");
-  };
+    localStorage.removeItem("user_id")
+    localStorage.removeItem("username")
+  }
 
   changeNav = () => {
     switch (window.location.pathname) {
       case "/your-posts":
-        return "Home";
+        return "Home"
       case "/home":
-        return "Your Posts";
+        return "Your Posts"
     }
-  };
+  }
 
   changeLogin = () => {
     if (window.location.pathname == "/") {
-      return;
+      return
     } else if (window.location.pathname == "/register") {
-      return;
+      return
     } else {
-      return "Logout";
+      return "Logout"
     }
-  };
+  }
 
   render() {
-    let navLink = this.changeNav();
-    let logLink = this.changeLogin();
+    let navLink = this.changeNav()
+    let logLink = this.changeLogin()
 
     this.changeAnchor = () => {
       if (window.location.pathname == "/home") {
-        return <a href="/your-posts">{navLink}</a>;
+        return <a href="/your-posts">{navLink}</a>
       } else {
-        return <a href="/home">{navLink}</a>;
+        return <a href="/home">{navLink}</a>
       }
-    };
-    let anchorChange = this.changeAnchor();
+    }
+    let anchorChange = this.changeAnchor()
 
     return (
       <div className="main-nav">
@@ -52,6 +52,6 @@ export default class Navbar extends Component {
           </a>
         </div>
       </div>
-    );
+    )
   }
 }

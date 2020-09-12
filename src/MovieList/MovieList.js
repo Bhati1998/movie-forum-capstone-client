@@ -7,7 +7,7 @@ import './MovieList.css';
 
 export default class MovieList extends Component {
     handleSubmit = (e) => {
-        console.log(this.props)
+        // console.log(this.props)
         // this.setState(this.props)
         // console.log(this.state)
     }

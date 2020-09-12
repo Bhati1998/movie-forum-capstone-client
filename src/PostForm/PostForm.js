@@ -1,7 +1,6 @@
 import  React, { Component } from 'react'; 
-import './PostForm.css'
-import config from '../config'
-// const API_ENDPOINT = 'http://localhost:8000'
+import './PostForm.css';
+import config from '../config';
 
 export default class PostForm extends Component {
     constructor(props) {
@@ -13,25 +12,21 @@ export default class PostForm extends Component {
             username: localStorage.getItem('username'),
             movie_db_id: this.props.movie_db_id.movie_db_id,
         }
-        this.handleSubmitPost = this.handleSubmitPost.bind(this);
+        this.handleSubmitPost = this.handleSubmitPost.bind(this)
     }
 
-    // checkState = (e) => {
-    //     console.log(this.state, 'this is state then props', this.props)
-    // }
-
     handleTitleChange = (e) => {
-        this.setState({ post_title: e.target.value });
+        this.setState({ post_title: e.target.value })
     }
 
     handleContentChange = (e) => {
-        this.setState({ post_content: e.target.value });
+        this.setState({ post_content: e.target.value })
     }
 
 
     handleSubmitPost = (event) => {
         event.preventDefault()
-        console.log('function triggering')
+        // console.log('function triggering')
             fetch(`${config.API_ENDPOINT}/posts`, {
                 method: 'POST',
                 headers: {
@@ -41,7 +36,7 @@ export default class PostForm extends Component {
 
             })
             .then(res => {
-                console.log(res.status)
+                // console.log(res.status)
                 if (res.status != 201) {
                     alert('Unable to post')
                 }
@@ -57,7 +52,7 @@ export default class PostForm extends Component {
 
 
     render() {
-        console.log(this.state, 'this is the state', this.props.props, 'this is the props')
+        // console.log(this.state, 'this is the state', this.props.props, 'this is the props')
         return (
             <form className ='post-form' onSubmit={this.handleSubmitPost}>
                 Post Title

@@ -33,3 +33,120 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+/*large desktop*/
+@media only screen and (max-width: 1600px) {
+    /* body {
+        border: 3px solid yellow;
+    } */
+    .skills-container .skills-container-images figure {
+        width: 16%;
+    }
+}
+
+/*iPad lanscape / small laptop*/
+@media only screen and (max-width: 1024px) {
+    /* body {
+        border: 3px solid blue;
+    } */
+    .skills-container .skills-container-images figure {
+        width: 24%;
+    }
+}
+
+/*iPad potrait*/
+@media only screen and (max-width: 768px) {
+    /* body {
+        border: 3px solid red;
+    } */
+
+    .about-pic-container-column,
+    .about-text-container-column {
+        width: 29%;
+    }
+
+    .about-text-container-column {
+        width: 70%;
+    }
+
+    .skills-container .skills-container-images figure {
+        width: 32%;
+    }
+
+    .proj-img-wrapper,
+    .proj-text-wrapper {
+        width: 100%;
+        display: block;
+    }
+}
+
+/*Android landscape*/
+@media only screen and (max-width: 640px) {
+    /* body {
+        border: 3px solid brown;
+    } */
+    .nav-icons li {
+        display: inline-block;
+        padding-right: 3px;
+        font-size: 95%;
+    }
+    .skills-container .skills-container-images figure {
+        width: 32%;
+    }
+    .about-pic-container-column,
+    .about-text-container-column {
+        width: 39%;
+    }
+
+    .about-text-container-column {
+        width: 60%;
+    }
+    .proj-img-wrapper, .proj-text-wrapper {
+        padding: 10px 5px 5px 10px;
+        vertical-align: top;
+    }
+    .proj-img {
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+/*iPhone landscape*/
+@media only screen and (max-width: 480px) {
+    /* body {
+        border: 3px solid green;
+    } */
+    .nav-icons li {
+        padding-right: 10px;
+        font-size: 120%;
+    }
+    .nav-text {
+        display: none;
+    }
+    .skills-container .skills-container-images figure {
+        width: 49%;
+    }
+    .about-pic-container-column,
+    .about-text-container-column {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-text-container-column {
+        width: 80%;
+    }
+    .tech-name {
+        margin: 10px .5px .5px .5px;    }
+}
+
+/*iPhone portrait*/
+@media only screen and (max-width: 320px) {
+    /* body {
+        border: 3px solid purple;
+    } */
+    .skills-container .skills-container-images figure {
+        width: 99%;
+    }
+}
